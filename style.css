@@ -1,0 +1,85 @@
+body{
+    background-color: blue;
+}
+#small{
+    display: none;
+}
+#medium{
+    display: none;
+}
+#large{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+    text-align: justify;
+    font-size: 18px;
+    margin: 20px 30px 20px 30px;
+}
+.lOne{
+    grid-column: 1;
+    grid-row: 2;
+}
+.lTwo{
+    grid-column: 2;
+    grid-row: 2;
+}
+.lThree{
+    grid-column: 3;
+    grid-row: 2;
+}
+
+/*media queries*/
+@media only screen and (max-width: 768px){
+    body{
+        background-color: green;
+    }
+    #small{
+        display: none;
+    }
+    #medium{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 15px;
+        text-align: justify;
+        font-size: 18px;
+        margin: 20px 30px 20px 30px;
+    }
+    .medOne{
+        grid-column: 1/3;
+        grid-row: 2;
+    }
+    .medTwo{
+        grid-column: 3;
+        grid-row: 2;
+    }
+    .medThree{
+        grid-column: 1/4;
+        grid-row: 3;
+    }
+    #large{
+        display: none;
+    }
+
+}
+
+@media only screen and (max-width: 410px){
+    body{
+        background-color: red;
+    }
+    #small{
+        display: flex;
+        flex-direction: column;
+        text-align: justify;
+        font-size: 16px;
+        margin: 20px 30px 20px 30px;
+    }
+    #small > h1{
+        text-align: left;
+    }
+    #medium{
+        display: none;
+    }
+    #large{
+        display: none;
+    }
+}
